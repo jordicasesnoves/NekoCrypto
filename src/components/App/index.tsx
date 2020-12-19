@@ -1,12 +1,14 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Header from '../Header';
 
 import { Routes, RouteType } from '../../routes';
 
 const App = (): JSX.Element => {
   return (
     <Router>
-      <div className="">
+      <div className="bg-gray-100">
+        <Header />
         <Switch>
           {Routes.map((route: RouteType) => (
             <Route key={route.path} path={route.path} exact={route.exact}>
